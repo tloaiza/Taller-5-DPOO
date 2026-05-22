@@ -6,5 +6,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class ProductoAjustadoTest {
+	
+	@AfterEach
+    void tearDown( ) throws Exception
+    {
+    }
 
 }
