@@ -55,7 +55,7 @@ public class Combo implements Producto
             precio += i.getPrecio( );
         }
 
-        return ( int ) ( precio * descuento );
+        return ( int ) ( precio - (precio * descuento) );
     }
 
     /**
@@ -67,7 +67,7 @@ public class Combo implements Producto
     public String generarTextoFactura( )
     {
         StringBuffer sb = new StringBuffer( );
-        sb.append( "Combo " + nombreCombo + "\n" );
+        sb.append( "Combo: " + nombreCombo + "\n" );
         sb.append( " Descuento: " + descuento + "\n" );
         sb.append( "            " + getPrecio( ) + "\n" );
 
