@@ -1,16 +1,13 @@
 package uniandes.dpoo.hamburguesas.tests;
 
 import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import uniandes.dpoo.hamburguesas.mundo.ProductoMenu;
 
 
 public class ProductoMenuTest {
       
-	//el atributo que usamos en todos los casos
+	//atributos
 	private ProductoMenu producto;
 	
 	
@@ -27,12 +24,12 @@ public class ProductoMenuTest {
 	
 	
 	@AfterEach
-    void tearDown( ) throws Exception
+    public void tearDown( ) throws Exception
     {
     }
 	
 	
-	@Test  // escenario 1: cuando tenemos un precio y queremos saber cual es
+	@Test  // escenario 1: cuando tenemos un producto y queremos saber su nombre
     public void testGetPrecio()
     {
         //WHEN
@@ -43,7 +40,7 @@ public class ProductoMenuTest {
     }
 	
 	
-	@Test  // escenario 2: cuando tenemos un nombre y queremos saber cual es
+	@Test  // escenario 2: cuando tenemos un producto y queremos saber su nombre
     public void testGetNombre()
     {
         //WHEN
@@ -61,7 +58,10 @@ public class ProductoMenuTest {
 		String factura = producto.generarTextoFactura();
 
         //THEN
-		String esperada = "corral\n" + "            " + "14000\n";
+		String esperada = "corral\n" + 
+                          "            " + 
+				          "14000\n";
+		
 	    assertEquals(esperada, factura, "La factura que se recibe no es la esperada");
     }
 	

@@ -2,6 +2,7 @@ package uniandes.dpoo.hamburguesas.mundo;
 
 import java.util.ArrayList;
 
+
 /**
  * Un producto ajustado es un producto para el cual el cliente solicitó alguna modificación.
  */
@@ -45,7 +46,15 @@ public class ProductoAjustado implements Producto
     @Override
     public int getPrecio( )
     {
-        return 0;
+    	
+    	int total = productoBase.getPrecio();
+    
+        for(Ingrediente ing : agregados)
+        {
+            total += ing.getCostoAdicional();
+        }
+        
+        return total;
     }
 
     /**
@@ -57,7 +66,7 @@ public class ProductoAjustado implements Producto
     public String generarTextoFactura( )
     {
         StringBuffer sb = new StringBuffer( );
-        sb.append( productoBase );
+        sb.append( productoBase.generarTextoFactura() );  //corrección: faltaba generar la "factura base" para agregarla a la factura final
         for( Ingrediente ing : agregados )
         {
             sb.append( "    +" + ing.getNombre( ) );
@@ -72,5 +81,18 @@ public class ProductoAjustado implements Producto
 
         return sb.toString( );
     }
-
+    
+    
+    
+    //adicionales para las pruebas
+    public void agregarIngrediente (Ingrediente ingrediente) {
+    	agregados.add(ingrediente);
+    	
+    }
+    
+    public void eliminarIngrediente (Ingrediente ingrediente) {
+    	eliminados.add(ingrediente);
+    	
+    }
+     
 }
