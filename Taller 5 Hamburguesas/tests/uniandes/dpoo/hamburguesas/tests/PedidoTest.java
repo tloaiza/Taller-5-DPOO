@@ -37,7 +37,7 @@ public class PedidoTest {
         int total = pedido.getPrecioTotalPedido();
 
         //THEN
-        assertEquals(16660, total);
+        assertEquals(16660, total, "El precio total del pedido que fue recibido no es el esperado");
     }
 
 	
@@ -51,7 +51,7 @@ public class PedidoTest {
         int total = pedido.getPrecioTotalPedido();
 
         //THEN
-        assertEquals(23205, total);
+        assertEquals(23205, total, "El precio total del pedido que fue recibido no es el esperado");
     }
 
     
@@ -74,7 +74,8 @@ public class PedidoTest {
                           "IVA:          2660\n" +
                           "Precio Total: 16660\n";
         
-        assertEquals(esperado, factura);
+        
+        assertEquals(esperado, factura, "La factura recibida del pedido no es la esperada");
     }
 	
 	
