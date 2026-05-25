@@ -25,7 +25,7 @@ public class RestauranteTest {
 	        File archivoIngredientes = new File("./data/ingredientes.txt");
 	        File archivoMenu = new File("./data/menu.txt");
 	        File archivoCombos = new File("./data/combos.txt");
-	        restaurante.cargarInformacionRestaurante(archivoIngredientes, archivoMenu, archivoCombos);
+	        restaurante.cargarInformacionRestaurante(archivoIngredientes, archivoMenu, archivoCombos);  //WHEN para el escenario 1
 	    }
 		
 		
