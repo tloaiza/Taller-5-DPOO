@@ -15,7 +15,7 @@ public class PedidoTest {
 
     
     @BeforeEach   //se ejecuta antes de cada test. Es el GIVEN
-    public void setUp()
+    public void setUp()  throws Exception
     {
         pedido = new Pedido("Juan", "Calle 123");
         corral = new ProductoMenu("corral", 14000);

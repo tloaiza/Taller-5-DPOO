@@ -15,7 +15,7 @@ public class ComboTest {
 	
 	
 	@BeforeEach  //se ejecuta antes de cada test. Es el GIVEN
-    void setUp()
+    void setUp()  throws Exception
     {
 	    itemsCombo = new ArrayList<ProductoMenu>();
         itemsCombo.add(new ProductoMenu("corral", 14000));

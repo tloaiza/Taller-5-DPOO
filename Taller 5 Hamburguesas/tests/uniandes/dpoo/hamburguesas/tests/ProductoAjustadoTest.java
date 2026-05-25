@@ -16,9 +16,9 @@ public class ProductoAjustadoTest {
 	private Ingrediente tomate;
 	
 	
-	//se ejecuta antes de cada test. Es el GIVEN 
-	@BeforeEach  
-    void setUp()
+	
+	@BeforeEach  //se ejecuta antes de cada test. Es el GIVEN 
+    void setUp()  throws Exception
     {
 		prodBase = new ProductoMenu("corral", 14000);  
         prodAjustado = new ProductoAjustado(prodBase);  
@@ -28,7 +28,7 @@ public class ProductoAjustadoTest {
 	
 	
 	@AfterEach
-    void tearDown( ) 
+    void tearDown( ) throws Exception
     {
     }
 	

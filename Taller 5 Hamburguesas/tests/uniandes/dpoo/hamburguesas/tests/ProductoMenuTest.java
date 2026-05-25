@@ -11,13 +11,9 @@ public class ProductoMenuTest {
 	private ProductoMenu producto;
 	
 	
-	/**
-	 * Este before each se ejecuta antes de cada test. En este caso es el GIVEN de cada uno
-	 * que es que se crea un producto llamado corral con un precio de 14000
-	 */
-	
+	//se ejecuta antes de cada test. Es el GIVEN 
 	@BeforeEach  
-	public void setUp()
+	public void setUp() throws Exception
     {
         producto = new ProductoMenu("corral", 14000);  
     }
